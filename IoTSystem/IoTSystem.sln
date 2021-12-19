@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31919.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSReceiver", "WSReceiver\WSReceiver.csproj", "{754F9339-F28A-4B6D-B1A7-4BA28E8DF45F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSTransmitter", "WSTransmitter\WSTransmitter.csproj", "{E113E193-F63F-4936-BC9C-0E6009F17827}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{754F9339-F28A-4B6D-B1A7-4BA28E8DF45F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{754F9339-F28A-4B6D-B1A7-4BA28E8DF45F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{754F9339-F28A-4B6D-B1A7-4BA28E8DF45F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{754F9339-F28A-4B6D-B1A7-4BA28E8DF45F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E113E193-F63F-4936-BC9C-0E6009F17827}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E113E193-F63F-4936-BC9C-0E6009F17827}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E113E193-F63F-4936-BC9C-0E6009F17827}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E113E193-F63F-4936-BC9C-0E6009F17827}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7C587D50-D450-42D3-A2B5-5E9B2D233313}
+	EndGlobalSection
+EndGlobal

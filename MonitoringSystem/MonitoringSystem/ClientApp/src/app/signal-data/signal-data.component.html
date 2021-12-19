@@ -1,0 +1,134 @@
+<h1 id="tableLabel">IOT DEVICE MONITORING SYSTEM</h1>
+
+<!-- <div class="grid-container">
+  <div class="grid-item">
+    <div>
+      <label for="fname">Page:</label>
+      <input type="text" id="anomalyPage" name="anomalyPage" [(ngModel)]="anomalyPage"><br>
+    </div>
+    <div>
+      <label for="fname">Size:</label>
+      <input type="text" id="anomalyPageSize" name="anomalyPageSize" [(ngModel)]="anomalyPageSize"><br>
+    </div>
+    <div>
+      Last update: <strong>{{updateTime_Anomaly | date:'yyyy-MM-dd hh:mm:ss:SSS'}}</strong>
+    </div>
+  </div>
+  <div class="grid-item">
+    <div>
+      <label for="fname">Page:</label>
+      <input type="text" id="page" name="page" [(ngModel)]="page"><br>
+    </div>
+    <div>
+      <label for="fname">Size:</label>
+      <input type="text" id="pageSize" name="pageSize" [(ngModel)]="pageSize"><br>
+    </div>
+    <div>
+      Last update: <strong>{{updateTime | date:'yyyy-MM-dd hh:mm:ss:SSS'}}</strong>
+    </div>
+  </div>
+  <div class="grid-item"></div>
+</div> -->
+
+<div class="grid-container">
+
+  <div class="grid-item">
+    <div><h2>Anomaly Signals</h2></div>
+    <div>
+      <label for="fname">Page:</label>
+      <input type="text" id="anomalyPage" name="anomalyPage" [(ngModel)]="anomalyPage"><br>
+    </div>
+    <div>
+      <label for="fname">Size:</label>
+      <input type="text" id="anomalyPageSize" name="anomalyPageSize" [(ngModel)]="anomalyPageSize"><br>
+    </div>
+    <div>
+      Last update: <strong>{{updateTime_Anomaly | date:'yyyy-MM-dd hh:mm:ss:SSS'}}</strong>
+    </div>
+    <table class='table table-striped' aria-labelledby="tableLabel" *ngIf="sineSignals">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Signal Source</th>
+          <th>Value</th>
+          <th>Date Stamp</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let signal of anomalySignals; let i = index"  [ngClass]="signal.source == 'Sine' ? 'sine' : 'state'">
+          <td>{{signal.id }}</td>
+          <td>{{signal.source }}</td>
+          <td>{{signal.value }}</td>
+          <td>{{signal.timeStamp | date:'yyyy-MM-dd hh:mm:ss:SSS'}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="grid-item">
+    <div><h2>Sine Signals</h2></div>
+    <div>
+      <label for="fname">Page:</label>
+      <input type="text" id="page" name="page" [(ngModel)]="page"><br>
+    </div>
+    <div>
+      <label for="fname">Size:</label>
+      <input type="text" id="pageSize" name="pageSize" [(ngModel)]="pageSize"><br>
+    </div>
+    <div>
+      Last update: <strong>{{updateTime | date:'yyyy-MM-dd hh:mm:ss:SSS'}}</strong>
+    </div>
+    <table class='table table-striped' aria-labelledby="tableLabel" *ngIf="sineSignals">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Sine signal</th>
+          <th>Date Stamp</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let signal of sineSignals; let i = index"  [ngClass]="signal.isAnomaly == 1 ? 'error' : 'success'">
+          <td>{{signal.id }}</td>
+          <td>{{signal.value }}</td>
+          <td>{{signal.timeStamp | date:'yyyy-MM-dd hh:mm:ss:SSS'}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="grid-item">
+    <div><h2>State Signals</h2></div>
+    <div>
+      <label for="fname">Page:</label>
+      <input type="text" id="page" name="page" [(ngModel)]="page"><br>
+    </div>
+    <div>
+      <label for="fname">Size:</label>
+      <input type="text" id="pageSize" name="pageSize" [(ngModel)]="pageSize"><br>
+    </div>
+    <div>
+      Last update: <strong>{{updateTime | date:'yyyy-MM-dd hh:mm:ss:SSS'}}</strong>
+    </div>
+    <table class='table table-striped' aria-labelledby="tableLabel" *ngIf="stateSignals">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>State signal</th>
+          <th>Date Stamp</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let signal of stateSignals" [ngClass]="signal.isAnomaly == 1 ? 'error' : 'success'">
+          <td>{{signal.id }}</td>
+          <td>{{signal.value }}</td>
+          <td>{{signal.timeStamp | date:'yyyy-MM-dd hh:mm:ss:SSS'}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+
+
+

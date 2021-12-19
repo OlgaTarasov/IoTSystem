@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+code {
+  color: #e01a76;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+}
+.grid-item {
+  text-align: center;
+  border: 1px;
+  padding: 30px;
+}
+.error {
+  background-color: red;
+  font-weight: bold;
+}
+.success {
+  font-weight: normal;
+}
+.sine {
+  background-color: rgb(240, 182, 182);
+}
+.state {
+  background-color: rgb(172, 119, 119);
+}
+.grid-item input {
+  margin: 10px;
+}
